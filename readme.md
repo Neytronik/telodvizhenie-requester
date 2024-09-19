@@ -1,6 +1,21 @@
 Для создания бинарного исполняемого файла и `.exe` для Windows из Python проекта, можно использовать инструменты, такие как `PyInstaller`. `PyInstaller` позволяет упаковать Python приложение вместе со всеми его зависимостями в один исполняемый файл.
 
-### Установка PyInstaller
+### Установка Зависимостей
+
+Установите зависимости с помощью pip:
+
+```sh
+pip install -r requirements.txt
+```
+
+Если pip не работает как отдельная программа, используйте python модули
+
+```sh
+python -m pip install -r requirements.txt
+```
+
+
+### Установка PyInstaller(сборщик запускаемого файла)
 
 Установите `PyInstaller` с помощью pip:
 
@@ -17,6 +32,12 @@ pip install pyinstaller
    ```sh
    pyinstaller --onefile --windowed dvizhapp.py
    ```
+   
+   Если pip не работает как отдельная программа, используйте python модули
+
+   ```sh
+   python -m pyinstaller --onefile --windowed dvizhapp.py
+   ```
 
    Параметры:
    - `--onefile`: Упаковать всё в один исполняемый файл.
@@ -28,6 +49,12 @@ pip install pyinstaller
 
    ```sh
    pyinstaller --onefile dvizhapp.py
+   ```
+   
+   Если pip не работает как отдельная программа, используйте python модули
+
+   ```sh
+   python -m pyinstaller --onefile dvizhapp.py
    ```
 
    Параметры:
@@ -51,6 +78,7 @@ pip install pyinstaller
 pyinstaller --onefile --windowed dvizhapp.py
 ```
 
+
 ### После выполнения команды
 
 После выполнения команды `PyInstaller` создаст несколько новых папок:
@@ -69,9 +97,12 @@ pyinstaller --onefile --windowed dvizhapp.py
 pyinstaller gui.spec
 ```
 
+Если pip не работает как отдельная программа, используйте python модули
+
+```sh
+python -m pyinstaller gui.spec
+```
+
 Теперь у вас есть исполняемый файл для вашего приложения, который можно запускать на Windows или macOS без необходимости установки Python и зависимостей.
 
-
-Хотя технически возможно создать исполняемый файл для Windows на macOS с помощью `PyInstaller`, это не является простой задачей и требует дополнительных шагов. Основная проблема заключается в том, что `PyInstaller` по умолчанию создает исполняемые файлы для той операционной системы, на которой он запускается.
-
-Для создания исполняемых файлов для Windows на macOS можно воспользоваться подходом кросс-компиляции. Вот несколько способов, как это можно сделать:
+**ВАЖНО** Запускаемые файлы на windows надо собирать на windows, для linux подобных - использовать  linux-based системы
