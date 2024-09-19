@@ -1,2 +1,4 @@
 *.xlsx
 *.xlsb
+/dist/
+/build/

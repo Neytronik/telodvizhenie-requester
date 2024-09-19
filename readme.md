@@ -10,14 +10,12 @@ pip install pyinstaller
 
 ### Создание исполняемого файла
 
-Перейдите в папку app
-
 1. **Создайте исполняемый файл для Windows (.exe):**
 
    Выполните следующую команду в терминале или командной строке в каталоге вашего проекта:
 
    ```sh
-   pyinstaller --onefile --windowed gui.py
+   pyinstaller --onefile --windowed dvizhapp.py
    ```
 
    Параметры:
@@ -29,7 +27,7 @@ pip install pyinstaller
    Выполните следующую команду в терминале:
 
    ```sh
-   pyinstaller --onefile gui.py
+   pyinstaller --onefile dvizhapp.py
    ```
 
    Параметры:
@@ -40,18 +38,17 @@ pip install pyinstaller
 Убедитесь, что у вас есть следующая структура проекта:
 
 ```
-app/
 │
-├── gui.py
+├── dvizhapp.py
 └── other_files_and_folders
 ```
 
 ### Пример команды для вашего проекта
 
-Предположим, ваш скрипт называется `gui.py`. Выполните следующую команду:
+Предположим, ваш скрипт называется `dvizhapp.py`. Выполните следующую команду:
 
 ```sh
-pyinstaller --onefile --windowed gui.py
+pyinstaller --onefile --windowed dvizhapp.py
 ```
 
 ### После выполнения команды
