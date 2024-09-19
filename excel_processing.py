@@ -20,7 +20,7 @@ class Composer:
             rows = []
             quantity = input_row['Количество']
             split_id = 1
-            while quantity > 2 * max_quantity_bound:
+            while quantity >= 2 * max_quantity_bound:
                 new_row = input_row.copy()
                 new_row['Количество'] = max_quantity_bound
                 new_row['split_id'] = f"{split_id}"
